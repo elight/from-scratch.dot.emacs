@@ -12,9 +12,8 @@
 
 (el-get 'sync)
 
-(ido-mode)
+(defun map-nrepl-eval-buffer ()
+  (local-set-key (kbd "C-x n b") 'nrepl-eval-buffer))
 
-
-
-
+(add-hook 'clojure-mode-hook 'map-nrepl-eval-buffer)
 
